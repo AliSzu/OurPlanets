@@ -1,0 +1,55 @@
+:host {
+  --scale: 1;
+}
+
+.viewport-header {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  z-index: 1;
+}
+
+h1 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: calc(2rem * var(--scale));
+  line-height: 1.2;
+  font-size: calc(20px * var(--scale));
+  text-align: center;
+  opacity: var(--scale);
+  span {
+    display: block;
+    font-size: calc(11rem * var(--scale));
+    letter-spacing: calc(-0.1vw * var(--scale));
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  h1 {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    line-height: 1.2;
+    font-size: 10px;
+    text-align: center;
+    span {
+      display: block;
+      font-size: 60px;
+      letter-spacing: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  h1 {
+    letter-spacing: 10px;
+    font-size: 8px;
+    span {
+      font-size: 40px;
+      letter-spacing: 8px;
+    }
+  }
+}
